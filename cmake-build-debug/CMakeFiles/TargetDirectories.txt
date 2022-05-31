@@ -1,0 +1,3 @@
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/cmake-build-debug/CMakeFiles/mnist_neural_net.dir
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/cmake-build-debug/CMakeFiles/rebuild_cache.dir
