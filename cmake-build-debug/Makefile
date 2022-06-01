@@ -141,33 +141,6 @@ mnist_neural_net/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/build
 .PHONY : mnist_neural_net/fast
 
-CSVReader.obj: CSVReader.cpp.obj
-
-.PHONY : CSVReader.obj
-
-# target to build an object file
-CSVReader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/CSVReader.cpp.obj
-.PHONY : CSVReader.cpp.obj
-
-CSVReader.i: CSVReader.cpp.i
-
-.PHONY : CSVReader.i
-
-# target to preprocess a source file
-CSVReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/CSVReader.cpp.i
-.PHONY : CSVReader.cpp.i
-
-CSVReader.s: CSVReader.cpp.s
-
-.PHONY : CSVReader.s
-
-# target to generate assembly for a file
-CSVReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/CSVReader.cpp.s
-.PHONY : CSVReader.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -204,9 +177,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mnist_neural_net
-	@echo ... CSVReader.obj
-	@echo ... CSVReader.i
-	@echo ... CSVReader.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
