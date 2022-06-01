@@ -14,6 +14,14 @@ fstream
 vector
 -
 
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h
+Eigen/Dense
+-
+iostream
+-
+sstream
+-
+
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp
 iostream
 -
@@ -21,6 +29,8 @@ Eigen/Dense
 -
 CSVReader.h
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h
+EigenUtils.h
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h
 
 C:/Users/Will/OneDrive/Projects/include/eigen/Eigen/Cholesky
 Core

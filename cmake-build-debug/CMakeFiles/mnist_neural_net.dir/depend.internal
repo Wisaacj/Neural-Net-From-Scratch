@@ -3,6 +3,7 @@
 
 CMakeFiles/mnist_neural_net.dir/main.cpp.obj
  C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h
+ C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h
  C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp
  C:/Users/Will/OneDrive/Projects/include/eigen/Eigen/Cholesky
  C:/Users/Will/OneDrive/Projects/include/eigen/Eigen/Core

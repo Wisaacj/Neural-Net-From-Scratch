@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Eigen/Dense>
 #include "CSVReader.h"
+#include "EigenUtils.h"
 
 using namespace std;
 using namespace Eigen;
@@ -23,8 +24,10 @@ int main() {
     // tie() unpacks the tuple values into separate variables
     tie(test_labels, test_features) = splitLabelsFromFeatures(test);
     tie(train_labels, train_features) = splitLabelsFromFeatures(train);
-    
+
     cout << "10th training instance: " << train_labels(10) << "\n" << train_features(10, all).reshaped(28, 28) << endl;
+    cout << "Shape of training set: " << get_shape(train_features) << endl;
+    cout << "Shape of test set: " << get_shape(test_features) << endl;
 
     return 0;
 }

@@ -85,6 +85,9 @@
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h">
 			<Option target="mnist_neural_net"/>
 		</Unit>
+		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h">
+			<Option target="mnist_neural_net"/>
+		</Unit>
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp">
 			<Option target="mnist_neural_net"/>
 		</Unit>
