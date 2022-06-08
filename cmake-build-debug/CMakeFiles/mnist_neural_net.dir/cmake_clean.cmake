@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mnist_neural_net.dir/MLP.cpp.obj"
   "CMakeFiles/mnist_neural_net.dir/main.cpp.obj"
   "libmnist_neural_net.dll.a"
   "mnist_neural_net.exe"

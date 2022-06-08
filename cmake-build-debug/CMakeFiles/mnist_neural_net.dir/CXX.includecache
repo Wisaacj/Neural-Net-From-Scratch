@@ -22,6 +22,12 @@ iostream
 sstream
 -
 
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MachineLearningUtils.h
+iostream
+-
+Eigen/Dense
+-
+
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp
 iostream
 -
@@ -31,6 +37,8 @@ CSVReader.h
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h
 EigenUtils.h
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h
+MachineLearningUtils.h
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MachineLearningUtils.h
 
 C:/Users/Will/OneDrive/Projects/include/eigen/Eigen/Cholesky
 Core

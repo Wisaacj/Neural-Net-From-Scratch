@@ -2,16 +2,10 @@
 #include <Eigen/Dense>
 #include "CSVReader.h"
 #include "EigenUtils.h"
+#include "PreprocessingUtils.h"
 
 using namespace std;
 using namespace Eigen;
-
-tuple<VectorXd, MatrixXd> splitLabelsFromFeatures(MatrixXd A) {
-    VectorXd labels = A(all, 0);
-    MatrixXd features = A(all, seqN(1, last));
-
-    return make_tuple(labels, features);
-}
 
 int main() {
     // Loading csv datasets into Eigen matrices
