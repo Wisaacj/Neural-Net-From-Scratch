@@ -19,6 +19,11 @@ int main() {
     tie(test_labels, test_features) = splitLabelsFromFeatures(test);
     tie(train_labels, train_features) = splitLabelsFromFeatures(train);
 
+    // One-hot encode the labels (y_test, y_train)
+    MatrixXd test_labels_encoded = oneHotEncode(test_labels);
+    MatrixXd train_labels_encoded = oneHotEncode(train_labels);
+
+    cout << "Training labels (10 x m) 1-Hot encoded: \n" << train_labels_encoded(all, seqN(0, 25)) << "\n" << endl;
     cout << "10th training instance: " << train_labels(10) << "\n" << train_features(10, all).reshaped(28, 28) << endl;
     cout << "Shape of training set: " << get_shape(train_features) << endl;
     cout << "Shape of test set: " << get_shape(test_features) << endl;

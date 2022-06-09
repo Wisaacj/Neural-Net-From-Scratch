@@ -88,12 +88,6 @@
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h">
 			<Option target="mnist_neural_net"/>
 		</Unit>
-		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MLP.cpp">
-			<Option target="mnist_neural_net"/>
-		</Unit>
-		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MLP.h">
-			<Option target="mnist_neural_net"/>
-		</Unit>
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/Metrics.h">
 			<Option target="mnist_neural_net"/>
 		</Unit>

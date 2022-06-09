@@ -141,33 +141,6 @@ mnist_neural_net/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/build
 .PHONY : mnist_neural_net/fast
 
-MLP.obj: MLP.cpp.obj
-
-.PHONY : MLP.obj
-
-# target to build an object file
-MLP.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/MLP.cpp.obj
-.PHONY : MLP.cpp.obj
-
-MLP.i: MLP.cpp.i
-
-.PHONY : MLP.i
-
-# target to preprocess a source file
-MLP.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/MLP.cpp.i
-.PHONY : MLP.cpp.i
-
-MLP.s: MLP.cpp.s
-
-.PHONY : MLP.s
-
-# target to generate assembly for a file
-MLP.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mnist_neural_net.dir\build.make CMakeFiles/mnist_neural_net.dir/MLP.cpp.s
-.PHONY : MLP.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -204,9 +177,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mnist_neural_net
-	@echo ... MLP.obj
-	@echo ... MLP.i
-	@echo ... MLP.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
