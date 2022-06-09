@@ -2,7 +2,8 @@
 #include <Eigen/Dense>
 #include "CSVReader.h"
 #include "EigenUtils.h"
-#include "PreprocessingUtils.h"
+#include "PreProccessingUtils.h"
+#include "MLP.h"
 
 using namespace std;
 using namespace Eigen;
@@ -23,10 +24,13 @@ int main() {
     MatrixXd test_labels_encoded = oneHotEncode(test_labels);
     MatrixXd train_labels_encoded = oneHotEncode(train_labels);
 
-    cout << "Training labels (10 x m) 1-Hot encoded: \n" << train_labels_encoded(all, seqN(0, 25)) << "\n" << endl;
+    cout << "Training labels 1-Hot encoded: \n" << train_labels_encoded(all, seqN(0, 25)) << "\n" << endl;
     cout << "10th training instance: " << train_labels(10) << "\n" << train_features(10, all).reshaped(28, 28) << endl;
-    cout << "Shape of training set: " << get_shape(train_features) << endl;
+    cout << "\nShape of training set: " << get_shape(train_features) << endl;
     cout << "Shape of test set: " << get_shape(test_features) << endl;
+
+    // Initialising neural network (multi-layered perceptron)
+    MLP* neural_network = new MLP();
 
     return 0;
 }

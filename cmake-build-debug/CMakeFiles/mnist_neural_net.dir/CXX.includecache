@@ -22,7 +22,7 @@ iostream
 sstream
 -
 
-C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/PreprocessingUtils.h
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/PreProccessingUtils.h
 iostream
 -
 Eigen/Dense
@@ -37,8 +37,8 @@ CSVReader.h
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h
 EigenUtils.h
 C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/EigenUtils.h
-PreprocessingUtils.h
-C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/PreprocessingUtils.h
+PreProccessingUtils.h
+C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/PreProccessingUtils.h
 
 C:/Users/Will/OneDrive/Projects/include/eigen/Eigen/Cholesky
 Core

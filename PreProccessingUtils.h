@@ -2,8 +2,8 @@
 // Created by Will on 01/06/2022.
 //
 
-#ifndef MNIST_NEURAL_NET_PREPROCESSINGUTILS_H
-#define MNIST_NEURAL_NET_PREPROCESSINGUTILS_H
+#ifndef MNIST_NEURAL_NET_PREPROCCESSINGUTILS_H
+#define MNIST_NEURAL_NET_PREPROCCESSINGUTILS_H
 
 #include <iostream>
 #include <Eigen/Dense>
@@ -30,4 +30,4 @@ MatrixXd oneHotEncode(const VectorXd& labels) {
     return one_hot_y.transpose();
 }
 
-#endif //MNIST_NEURAL_NET_PREPROCESSINGUTILS_H
+#endif //MNIST_NEURAL_NET_PREPROCCESSINGUTILS_H
