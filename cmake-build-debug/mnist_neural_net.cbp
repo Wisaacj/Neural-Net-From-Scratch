@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/ActivationFunctions.h">
+			<Option target="mnist_neural_net"/>
+		</Unit>
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/CSVReader.h">
 			<Option target="mnist_neural_net"/>
 		</Unit>
@@ -95,9 +98,6 @@
 			<Option target="mnist_neural_net"/>
 		</Unit>
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/Metrics.h">
-			<Option target="mnist_neural_net"/>
-		</Unit>
-		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MultiLayeredPerceptronUtils.h">
 			<Option target="mnist_neural_net"/>
 		</Unit>
 		<Unit filename="C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/PreProccessingUtils.h">

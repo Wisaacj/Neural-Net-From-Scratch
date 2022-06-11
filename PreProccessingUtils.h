@@ -15,7 +15,7 @@ tuple<VectorXd, MatrixXd> splitLabelsFromFeatures(const MatrixXd& A) {
     VectorXd labels = A(all, 0);
     MatrixXd features = A(all, seqN(1, last));
 
-    return make_tuple(labels, features);
+    return make_tuple(labels, features.transpose());
 }
 
 MatrixXd oneHotEncode(const VectorXd& labels) {

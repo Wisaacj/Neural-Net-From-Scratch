@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 set(EIGEN_DIR "C:/Users/Will/OneDrive/Projects/include/eigen")
 include_directories(${EIGEN_DIR})
 
-add_executable(mnist_neural_net main.cpp CSVReader.h EigenUtils.h PreProccessingUtils.h Metrics.h MultiLayeredPerceptronUtils.h MLP.cpp MLP.h)
+add_executable(mnist_neural_net main.cpp CSVReader.h EigenUtils.h PreProccessingUtils.h Metrics.h MLP.cpp MLP.h ActivationFunctions.h)
