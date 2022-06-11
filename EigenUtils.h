@@ -23,4 +23,11 @@ string get_shape(const EigenBase<Derived>& x) {
     return oss.str();
 }
 
+/*
+ * Exp() helper function for element-wise exponential function
+ */
+double EigenExp(double x) {
+    return exp(x);
+}
+
 #endif //MNIST_NEURAL_NET_EIGENUTILS_H

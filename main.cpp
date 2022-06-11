@@ -34,15 +34,18 @@ int main() {
 //    MLP* neural_network = new MLP();
 
     MatrixXd m(2, 2);
-    m << 1, 2, 3, 4;
-    cout << m.exp() << endl;
-    cout << endl << m;
-    m = m.exp();
-    cout << endl << m << endl;
+    m << -1.4, 22, 3, 400;
+
+    MatrixXd a(2, 1);
+    a << 4, 8;
+    cout << a << endl << a.array() / a.array() << endl;
+
+    cout << a.unaryExpr(&EigenExp).sum() << endl;
 
     const auto mColwise = m.colwise();
     for_each(mColwise.begin(), mColwise.end(), [](const auto &column){
-       return column.exp() / column.exp().sum();
+        cout << "Column: " << column << "\n" << "Softmax column: " << "\n" << column.unaryExpr(&EigenExp) / column.unaryExpr(&EigenExp).sum() << endl;
+       return column.unaryExpr(&EigenExp) / column.unaryExpr(&EigenExp).sum();
     });
 
     cout << endl << m;
