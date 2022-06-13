@@ -19,4 +19,8 @@ using namespace std;
  * 5. F1 function
  */
 
+double crossEntropyLoss(const MatrixXd &groundTruth, const MatrixXd &predictedProba);
+
+double accuracy(const MatrixXd &groundTruth, const MatrixXd &predictions);
+
 #endif //MNIST_NEURAL_NET_METRICS_H

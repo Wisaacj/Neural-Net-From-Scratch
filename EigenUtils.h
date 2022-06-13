@@ -24,4 +24,6 @@ string get_shape(const Eigen::EigenBase<Derived>& x) {
 
 double eigenExp(double x);
 
+double eigenLog(double x);
+
 #endif //MNIST_NEURAL_NET_EIGENUTILS_H

@@ -15,6 +15,13 @@ double ReLU(double x) {
 }
 
 /*
+ * Derivative of ReLU activation function
+ */
+double ReLUDerivative(double x) {
+    return (x > 0 ? 1 : 0);
+}
+
+/*
  * Activation function: Softmax
  * [ Do not want to use pass-by-reference here ]
  */
@@ -24,11 +31,4 @@ MatrixXd Softmax(MatrixXd Z) {
         Z.col(i) = Z.col(i).unaryExpr(&eigenExp) / Z.col(i).unaryExpr(&eigenExp).sum();
     }
     return Z;
-}
-
-/*
- * Derivative of ReLU activation function
- */
-double ReLUDerivative(double x) {
-    return (x > 0 ? 1 : 0);
 }

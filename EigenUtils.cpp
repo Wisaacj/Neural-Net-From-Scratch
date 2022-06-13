@@ -12,3 +12,7 @@ using namespace std;
 double eigenExp(double x) {
     return std::exp(x);
 }
+
+double eigenLog(double x) {
+    return std::log(x);
+}
