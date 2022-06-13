@@ -41,6 +41,8 @@ tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> MLP::forwardPropagation(const Matr
 
 tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd>
 MLP::backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1) {
+    MatrixXd dZ_2 = A_2 - y;
+
     return make_tuple(X, y, A_2, A_1);
 }
 
