@@ -16,7 +16,7 @@ public:
     virtual ~MLP();
     void initialiseParameters();
     void train(const MatrixXd& X, const MatrixXd& y, double learningRate, int epochs);
-    MatrixXd predict(const MatrixXd& X);
+    VectorXd predict(const MatrixXd& X);
 private:
     MatrixXd w_1, w_2;
     VectorXd b_1, b_2;

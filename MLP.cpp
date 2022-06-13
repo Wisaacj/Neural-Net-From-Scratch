@@ -75,6 +75,20 @@ void MLP::updateParameters(const MatrixXd &dW_1, const MatrixXd &db_1, const Mat
     this->b_2 = this->b_2 - learningRate * db_2;
 }
 
-MatrixXd MLP::predict(const MatrixXd &X) {
-    return X;
+/*
+ * See page: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html
+ * [ There's almost certainly a more elegant way to do this ]
+ */
+VectorXd MLP::predict(const MatrixXd &X) {
+    MatrixXd _1, _2, _3, probaPredictions;
+    tie(_1, _2, _3, probaPredictions) = forwardPropagation(X);
+
+    VectorXd predictions(1, X.cols());
+    for (int i = 0; i < X.cols(); i++) {
+        Index maxRow;
+        probaPredictions.col(i).maxCoeff(&maxRow);
+        predictions(0, i) = (double) maxRow;
+    }
+
+    return predictions;
 }
