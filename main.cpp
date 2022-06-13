@@ -20,6 +20,10 @@ int main() {
     tie(test_labels, test_features) = splitLabelsFromFeatures(test);
     tie(train_labels, train_features) = splitLabelsFromFeatures(train);
 
+    // Scaling feature values
+    test_features /= 255.;
+    train_features /= 255.;
+
     // One-hot encode the labels (y_test, y_train)
     MatrixXd test_labels_encoded = oneHotEncode(test_labels);
     MatrixXd train_labels_encoded = oneHotEncode(train_labels);

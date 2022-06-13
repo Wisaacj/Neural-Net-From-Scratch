@@ -19,9 +19,9 @@ MLP::~MLP() = default;
 
 void MLP::initialiseParameters() {
     this->w_1 = MatrixXd::Random(10, 784);
-    this->b_1 = MatrixXd::Random(10, 1);
+    this->b_1 = VectorXd::Random(10, 1);
     this->w_2 = MatrixXd::Random(10, 10);
-    this->b_2 = MatrixXd::Random(10, 1);
+    this->b_2 = VectorXd::Random(10, 1);
 }
 
 void MLP::train(const MatrixXd &X, const MatrixXd &y, double learningRate, int epochs) {
@@ -34,20 +34,20 @@ void MLP::train(const MatrixXd &X, const MatrixXd &y, double learningRate, int e
 
         updateParameters(dW_1, db_1, dW_2, db_2, learningRate);
 
-        if (i % 10 == 0) {
+        if (i % 2 == 0) {
             cout << "Iteration: " << i << endl;
-            cout << "Cross-entropy loss: " << crossEntropyLoss(y, A_2);
+            cout << "Cross-entropy loss: " << crossEntropyLoss(y, A_2) << endl;
         }
     }
 }
 
 tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> MLP::forwardPropagation(const MatrixXd &X) {
     // Calculate first hidden-layer (unactivated)
-    MatrixXd Z_1 = (this->w_1 * X) + this->b_1;
+    MatrixXd Z_1 = (this->w_1 * X).colwise() + this->b_1;
     // Apply ReLU activation function (activated)
     MatrixXd A_1 = Z_1.unaryExpr(&ReLU);
     // Calculate output-layer (unactivated)
-    MatrixXd Z_2 = (this->w_2 * A_1) + this->b_1;
+    MatrixXd Z_2 = (this->w_2 * A_1).colwise() + this->b_2;
     // Apply softmax activation function (activated)
     MatrixXd A_2 = Softmax(Z_2);
 
