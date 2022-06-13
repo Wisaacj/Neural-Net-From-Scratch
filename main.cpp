@@ -1,10 +1,9 @@
 #include <iostream>
 #include <Eigen/Dense>
-#include <unsupported/Eigen/MatrixFunctions>
 #include "CSVReader.h"
-#include "EigenUtils.h"
 #include "PreProccessingUtils.h"
 #include "MLP.h"
+#include "EigenUtils.h"
 
 using namespace std;
 using namespace Eigen;
@@ -34,16 +33,19 @@ int main() {
 //    MLP* neural_network = new MLP();
 
     MatrixXd m(2, 2);
-    m << 1, 2, 3, 4;
-    cout << m.exp() << endl;
-    cout << endl << m;
-    m = m.exp();
+    m << 100, -3, 100, 4;
     cout << endl << m << endl;
 
-    const auto mColwise = m.colwise();
-    for_each(mColwise.begin(), mColwise.end(), [](const auto &column){
-       return column.exp() / column.exp().sum();
-    });
+//    const auto mColwise = m.colwise();
+//    for_each(mColwise.begin(), mColwise.end(), [](const auto &column){
+//        cout << "Before: \n" << column << endl << "After: \n" << column.unaryExpr(&eigenExp) / column.unaryExpr(&eigenExp).sum() << endl;
+//        return column.unaryExpr(&eigenExp) / column.unaryExpr(&eigenExp).sum();
+//    });
+
+    for (int i = 0; i < m.cols(); i++) {
+        cout << m.col(i) << endl;
+        m.col(i) = m.col(i).unaryExpr(&eigenExp) / m.col(i).unaryExpr(&eigenExp).sum();
+    }
 
     cout << endl << m;
 
