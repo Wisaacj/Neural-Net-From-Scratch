@@ -3,8 +3,10 @@
 //
 
 #include <Eigen/Dense>
+#include <iostream>
 #include "MLP.h"
 #include "ActivationFunctions.h"
+#include "Metrics.h"
 
 using namespace std;
 using namespace Eigen;
@@ -23,7 +25,20 @@ void MLP::initialiseParameters() {
 }
 
 void MLP::train(const MatrixXd &X, const MatrixXd &y, double learningRate, int epochs) {
+    for (int i=0; i<epochs; i++) {
+        MatrixXd Z_1, A_1, Z_2, A_2;
+        tie(Z_1, A_1, Z_2, A_2) = forwardPropagation(X);
 
+        MatrixXd dW_1, db_1, dW_2, db_2;
+        tie(dW_1, db_1, dW_2, db_2) = backwardPropagation(X, y, A_2, A_1, Z_1);
+
+        updateParameters(dW_1, db_1, dW_2, db_2, learningRate);
+
+        if (i % 10 == 0) {
+            cout << "Iteration: " << i << endl;
+            cout << "Cross-entropy loss: " << crossEntropyLoss(y, A_2);
+        }
+    }
 }
 
 tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> MLP::forwardPropagation(const MatrixXd &X) {

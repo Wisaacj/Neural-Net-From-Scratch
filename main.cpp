@@ -34,6 +34,7 @@ int main() {
 
     // Initialising neural network (multi-layered perceptron)
     MLP* neural_network = new MLP();
+    neural_network->train(train_features, train_labels_encoded, 0.1, 200);
 
     return 0;
 }
