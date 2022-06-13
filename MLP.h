@@ -20,7 +20,7 @@ public:
 private:
     MatrixXd w_1, b_1, w_2, b_2;
     tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> forwardPropagation(const MatrixXd &X);
-    tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1);
+    tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1, const MatrixXd &Z_1);
     void updateParameters(const MatrixXd &dW_1, const MatrixXd &db_1, const MatrixXd &dW_2, const MatrixXd &db_2, double learningRate);
 };
 

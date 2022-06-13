@@ -40,10 +40,16 @@ tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> MLP::forwardPropagation(const Matr
 }
 
 tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd>
-MLP::backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1) {
+MLP::backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1, const MatrixXd &Z_1) {
     MatrixXd dZ_2 = A_2 - y;
+    MatrixXd dW_2 = (dZ_2 * A_1.transpose()) * 1/X.cols(); // X.cols() is the number of instances
+    MatrixXd db_2 = dZ_2.rowwise().sum() * 1/X.cols(); // Average (row-wise) error
 
-    return make_tuple(X, y, A_2, A_1);
+    MatrixXd dZ_1 = (this->w_2.transpose() * dZ_2).cwiseProduct(Z_1.unaryExpr(&ReLUDerivative)); // cwiseProduct() is coefficient-wise
+    MatrixXd dW_1 = (dZ_1 * X.transpose()) * (1/X.cols());
+    MatrixXd db_1 = dZ_1.rowwise().sum() * 1/X.cols();
+
+    return make_tuple(dW_1, db_1, dW_2, db_2);
 }
 
 void MLP::updateParameters(const MatrixXd &dW_1, const MatrixXd &db_1, const MatrixXd &dW_2, const MatrixXd &db_2, double learningRate) {
