@@ -6,7 +6,7 @@
 #define MNIST_NEURAL_NET_ACTIVATIONFUNCTIONS_H
 
 #include <Eigen/Dense>
-#include <unsupported/Eigen/MatrixFunctions>
+#include "EigenUtils.h"
 
 using namespace std;
 using namespace Eigen;
@@ -27,9 +27,7 @@ double ReLU(double x) {
 //    // Iterating column-wise
 //    const auto zColwise = Z.colwise();
 //    for_each(zColwise.begin(), zColwise.end(), [](const auto &column){
-//       column = column.exp();
-//       column = column / column.sum();
-//       return column;
+//        return column.unaryExpr(&EigenExp) / column.unaryExpr(&EigenExp).sum();
 //    });
 //    return Z;
 //}

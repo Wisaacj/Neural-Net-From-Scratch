@@ -1,6 +1,5 @@
 #include <iostream>
 #include <Eigen/Dense>
-#include <unsupported/Eigen/MatrixFunctions>
 #include "CSVReader.h"
 #include "EigenUtils.h"
 #include "PreProccessingUtils.h"

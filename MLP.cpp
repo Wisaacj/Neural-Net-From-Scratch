@@ -2,8 +2,12 @@
 // Created by Will on 10/06/2022.
 //
 
+#include <Eigen/Dense>
 #include "MLP.h"
 #include "ActivationFunctions.h"
+
+using namespace std;
+using namespace Eigen;
 
 MLP::MLP() {
     this->initialiseParameters();
@@ -37,9 +41,13 @@ tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd> MLP::forwardPropagation(const Matr
 
 tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd>
 MLP::backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A_2, const MatrixXd &A_1) {
-    return tuple<MatrixXd, MatrixXd, MatrixXd, MatrixXd>();
+    return make_tuple(X, y, A_2, A_1);
 }
 
 void MLP::updateParameters(const MatrixXd &dW_1, const MatrixXd &db_1, const MatrixXd &dW_2, const MatrixXd &db_2, double learningRate) {
 
+}
+
+MatrixXd MLP::predict(const MatrixXd &X) {
+    return X;
 }

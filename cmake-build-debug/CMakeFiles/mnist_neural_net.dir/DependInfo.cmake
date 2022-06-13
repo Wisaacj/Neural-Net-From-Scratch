@@ -1,17 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MLP.cpp" "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/cmake-build-debug/CMakeFiles/mnist_neural_net.dir/MLP.cpp.obj"
-  "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp" "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/cmake-build-debug/CMakeFiles/mnist_neural_net.dir/main.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/Users/Will/OneDrive/Projects/include/eigen"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/MLP.cpp" "CMakeFiles/mnist_neural_net.dir/MLP.cpp.obj" "gcc" "CMakeFiles/mnist_neural_net.dir/MLP.cpp.obj.d"
+  "C:/Users/Will/OneDrive/Projects/C++/mnist-neural-net/main.cpp" "CMakeFiles/mnist_neural_net.dir/main.cpp.obj" "gcc" "CMakeFiles/mnist_neural_net.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
