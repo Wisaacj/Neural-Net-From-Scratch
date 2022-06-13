@@ -52,8 +52,12 @@ MLP::backwardPropagation(const MatrixXd &X, const MatrixXd &y, const MatrixXd &A
     return make_tuple(dW_1, db_1, dW_2, db_2);
 }
 
+// Gradient descent update function
 void MLP::updateParameters(const MatrixXd &dW_1, const MatrixXd &db_1, const MatrixXd &dW_2, const MatrixXd &db_2, double learningRate) {
-
+    this->w_1 = this->w_1 - learningRate * dW_1;
+    this->b_1 = this->b_1 - learningRate * db_1;
+    this->w_2 = this->w_2 - learningRate * dW_2;
+    this->b_2 = this->b_2 - learningRate * db_2;
 }
 
 MatrixXd MLP::predict(const MatrixXd &X) {
